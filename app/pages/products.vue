@@ -7,7 +7,7 @@
 				</div>
 			</div>
 			<div class="row long-goods-list">
-			<div class="col-lg-3 col-sm-6" v-for="card in data">
+			<div class="col-lg-3 col-sm-6" v-for="card in data" :key="card.id">
 				<div class="goods-card">
 					<span class="label" v-if="card.label">{{card.label.toUpperCase()}}</span>
 					<img :src="card.img" alt="image: Hoodie" class="goods-image">
@@ -21,8 +21,6 @@
 			</div>
 		</div>
 	</section>
-
-	{{rout.query.field}} / {{rout.query.name}}
 </template>
 
 <scripts setup lang = "ts">

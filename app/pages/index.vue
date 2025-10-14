@@ -122,7 +122,7 @@
 			</div>
 		</div>
 		<div class="short-goods row">
-			<div class="col-lg-3 col-sm-6" v-for="card in data">
+			<div class="col-lg-3 col-sm-6" v-for="card in data" :key="card.id">
 				<div class="goods-card">
 					<span class="label">{{card.label.toUpperCase()}}</span>
 					<img :src="card.img" alt="image: Hoodie" class="goods-image">
